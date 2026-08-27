@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# Shell scripts must stay LF: CRLF breaks the shebang on Linux CI runners.
+*.sh text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
