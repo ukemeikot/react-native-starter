@@ -234,8 +234,8 @@ If the scan fails, do not install dependencies or build until it is resolved.
 
 ### Other checks
 
-| Check    | Runs on                         |
-| -------- | ------------------------------- |
-| CodeQL   | push, PR, weekly schedule       |
-| Gitleaks | push, PR, weekly schedule       |
+| Check        | Runs on                                    |
+| ------------ | ------------------------------------------ |
+| CodeQL       | push, PR, weekly schedule                  |
+| Gitleaks     | push, PR, weekly schedule                  |
 | `pnpm audit` | every CI run (`--audit-level high --prod`) |
