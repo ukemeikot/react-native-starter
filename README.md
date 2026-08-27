@@ -6,7 +6,7 @@ Production-ready Expo starter using **Vertical Slice Architecture**. Clone and s
 
 | Layer           | Choice                                            |
 | --------------- | ------------------------------------------------- |
-| Framework       | Expo SDK 55 + Expo Router v4                      |
+| Framework       | Expo SDK 57 + Expo Router (file-based)            |
 | Language        | TypeScript (strict)                               |
 | Package manager | pnpm (hoisted)                                    |
 | Navigation      | File-based routing with guarded route groups      |
@@ -33,11 +33,10 @@ pnpm start
 
 **Demo credentials** (no backend needed): `demo@example.com` / `Password1`
 
-> **Expo Go caveat (SDK 55):** The Expo Go versions on the App Store and Google Play may lag behind SDK 55 releases. See [expo/expo#43699](https://github.com/expo/expo/issues/43699).
->
-> - **Android** — run `pnpm start` then choose **"Open on Android"** from the dev menu. This downloads the latest Expo Go build directly to the device, bypassing the Play Store version.
-> - **iOS** — use the [Expo Go TestFlight build](https://testflight.apple.com/join/E2NifhGI) (SDK 55 compatible) instead of the App Store version.
-> - **Recommended** — use a [development build](https://docs.expo.dev/develop/development-builds/introduction/) to avoid Expo Go version constraints entirely.
+> **Running on device:** a [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+> is recommended over Expo Go. Expo Go ships a fixed set of native modules, so any
+> library with native code that is not bundled into it will fail at runtime, and the
+> published Expo Go build can lag behind the current SDK.
 
 ---
 
