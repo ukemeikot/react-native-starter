@@ -202,6 +202,31 @@ Push to `main` (or open a PR) → GitHub Actions:
 
 ---
 
+## AI agent skills
+
+Agent guidance lives in [`AGENTS.md`](AGENTS.md) and `.claude/skills/`. Claude Code
+picks the skills up automatically; other agents should start from `AGENTS.md`.
+
+| Skill                                                                              | Source                                                                                                                     | Covers                                                                       |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`vercel-react-native-skills`](.claude/skills/vercel-react-native-skills/SKILL.md) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills) (MIT, Vercel) | 38 React Native performance rules: lists, animations, rendering, state       |
+| [`expo`](.claude/skills/expo/SKILL.md)                                             | [expo/skills](https://github.com/expo/skills) + [docs.expo.dev/skills](https://docs.expo.dev/skills/) (MIT, Expo)          | Expo SDK, expo-router, config plugins, development builds, EAS, SDK upgrades |
+
+**Thanks to the Vercel and Expo teams for publishing these openly.**
+
+The Vercel rules are vendored verbatim (they are a stable, versioned document and
+have no installer). Expo's 24 skills are **installed rather than vendored**, since
+Expo revises them each SDK release and a frozen copy would soon be giving
+SDK-55-era advice on an SDK-57 project:
+
+```sh
+claude plugin install expo@claude-plugins-official   # Claude Code
+codex plugin add expo@openai-curated                 # Codex
+npx skills add expo/skills                           # Cursor and others
+```
+
+---
+
 ## Security
 
 ### Supply-chain scanning

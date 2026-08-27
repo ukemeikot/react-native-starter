@@ -5,3 +5,7 @@ ios/
 .expo/
 pnpm-lock.yaml
 expo-env.d.ts
+
+# Vendored verbatim from vercel-labs/agent-skills (MIT). Keep byte-identical to
+# upstream so it can be re-synced by re-copying.
+.claude/skills/vercel-react-native-skills/
